@@ -18,4 +18,4 @@
 
 ## Architecture
 
-<!-- TODO: optional diagram — put image files in assets/diagrams/ -->
+<!-- TODO: optional diagram. Put image files in assets/diagrams/ -->

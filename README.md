@@ -4,51 +4,36 @@ This repository documents how to connect developer tools, editors, and SDKs to t
 
 New to the Airia AI Gateway? Start with [`docs/what-is-ai-gateway.md`](docs/what-is-ai-gateway.md).
 
-## Before / after Airia
+## Quick example
 
-**Before** — calling a provider directly:
-
-```python
-from openai import OpenAI
-
-client = OpenAI(api_key="sk-...")
-
-response = client.chat.completions.create(
-    model="gpt-4o",
-    messages=[{"role": "user", "content": "Hello"}],
-)
-```
-
-**After** — the same code, routed through the Airia AI Gateway:
+Point the OpenAI SDK at the Airia AI Gateway by changing its base URL and API key:
 
 ```python
-from openai import OpenAI
+import openai
 
-client = OpenAI(
-    api_key="<YOUR_AIRIA_API_KEY>",
-    base_url="<YOUR_AIRIA_GATEWAY_URL>",
+# Configure client to use the Airia AI Gateway
+client = openai.OpenAI(
+    base_url="https://prodaus.gateway.airia.ai/openai/v1",
+    api_key="<YOUR-AIRIA-AI-GATEWAY-API-KEY>"  # Replace with your Airia AI Gateway API key.
 )
 
-response = client.chat.completions.create(
-    model="gpt-4o",
-    messages=[{"role": "user", "content": "Hello"}],
+# Make requests as usual
+response = client.responses.create(
+    model="gpt-6.1-sol",
+    input="In one sentence, explain what an enterprise AI gateway does."
 )
+
+print(response.output_text)
 ```
 
-Only the client configuration changes — swap in your Airia API key and gateway URL, and the rest of your code stays the same.
-
-<!-- TODO: confirm this example accurately reflects how a client points at the Airia AI Gateway before publishing. -->
+Replace the base URL with your tenant's Gateway URL from the Airia dashboard.
 
 ## How this repo is organized
 
-- **[`cli-agents/`](cli-agents/)** — CLI-based coding agents (Claude Code, Codex CLI, Gemini CLI, etc.)
-- **[`editors/`](editors/)** — IDEs and editor integrations (Cursor, VS Code, Zed, etc.)
-- **[`sdks/`](sdks/)** — Language SDKs and frameworks (OpenAI SDK, Anthropic SDK, LangChain, etc.)
-- **[`runbooks/`](runbooks/)** — Specific tool + model provider recipes that need extra configuration beyond the generic setup (e.g. a CLI agent routed through a particular cloud provider)
-
-Each category holds one generic "how to point this tool at the Airia AI Gateway" doc per tool. Runbooks only exist for tool + provider combinations that need non-obvious extra steps — not every combination gets one.
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to add a new integration.
+- **[`cli-agents/`](cli-agents/)**: CLI-based coding agents (Claude Code, Codex CLI, Gemini CLI, etc.)
+- **[`editors/`](editors/)**: IDEs and editor integrations (Cursor, VS Code, Zed, etc.)
+- **[`sdks/`](sdks/)**: Language SDKs and frameworks (OpenAI SDK, Anthropic SDK, LangChain, etc.)
+- **[`runbooks/`](runbooks/)**: Specific tool + model provider recipes that need extra configuration beyond the generic setup (e.g. a CLI agent routed through a particular cloud provider)
 
 ## CLI Agents
 
@@ -73,7 +58,3 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to add a new integration.
 | Runbook | Status | Docs |
 |---|---|---|
 | _No runbooks documented yet_ | | |
-
-## Contributing
-
-Contributions are welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the folder structure, templates, and PR checklist.

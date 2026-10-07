@@ -1,6 +1,6 @@
 # Contributing to Airia AI Gateway Integrations
 
-Thanks for helping document how developer tools connect to the Airia AI Gateway. This repo stays useful because every integration follows the same structure and template — please read this before opening a PR.
+Thanks for helping document how developer tools connect to the Airia AI Gateway. This repo stays useful because every integration follows the same structure and template, so please read this before opening a PR.
 
 ## Where does my integration go?
 
@@ -16,9 +16,9 @@ Don't create a runbook for every possible tool + provider pairing. Only write on
 ## Adding a CLI agent, editor, or SDK integration
 
 1. Copy `templates/tool-template.md` to `<category>/<tool-slug>/README.md` (e.g. `cli-agents/codex-cli/README.md`).
-2. Fill in every section — don't leave template placeholders in the merged doc.
+2. Fill in every section, and don't leave template placeholders in the merged doc.
 3. If you have screenshots, add them to a local `images/` folder next to the README (e.g. `cli-agents/codex-cli/images/01-setup.png`) and reference them with descriptive alt text.
-4. Add a row to the relevant table in the root `README.md`. That table is the single source of truth for what's documented — there are no per-category index READMEs to keep in sync.
+4. Add a row to the relevant table in the root `README.md`. That table is the single source of truth for what's documented; there are no per-category index READMEs to keep in sync.
 
 ## Adding a runbook
 
@@ -30,16 +30,16 @@ Don't create a runbook for every possible tool + provider pairing. Only write on
 
 ## Screenshots and assets
 
-- Screenshots live next to the doc that uses them, in an `images/` folder — not in the top-level `assets/` folder.
+- Screenshots live next to the doc that uses them, in an `images/` folder, not in the top-level `assets/` folder.
 - Number them in the order they appear: `01-`, `02-`, etc.
 - Always write descriptive alt text, e.g. `![Airia dashboard showing API key creation](images/01-create-key.png)`.
-- The top-level `assets/` folder is only for things reused across multiple docs — logos (`assets/logos/`) and architecture diagrams (`assets/diagrams/`).
+- The top-level `assets/` folder is only for things reused across multiple docs: logos (`assets/logos/`) and architecture diagrams (`assets/diagrams/`).
 
 ## Style guidelines
 
 - Number setup steps; don't use unordered lists for sequential instructions.
 - Use fenced code blocks with a language tag.
-- Keep the "Overview" section to two or three sentences — detail belongs in the sections below it.
+- Keep the "Overview" section to two or three sentences; detail belongs in the sections below it.
 - Link to `docs/what-is-ai-gateway.md` instead of re-explaining gateway concepts (auth, routing, observability) in every doc.
 
 ## Pull request checklist
@@ -47,5 +47,5 @@ Don't create a runbook for every possible tool + provider pairing. Only write on
 - [ ] Followed `templates/tool-template.md` or `templates/runbook-template.md`
 - [ ] Tested the setup steps end-to-end
 - [ ] Screenshots (if any) are in a local `images/` folder with alt text
-- [ ] Added a row to the root `README.md` and the relevant category `README.md`
+- [ ] Added a row to the relevant table in the root `README.md`
 - [ ] All links resolve
