@@ -1,6 +1,6 @@
 # <Tool Name> + <Provider Name>
 
-<!-- One or two sentences on why this specific combination needs its own doc. Only create a runbook when there's real friction beyond the generic tool doc. Otherwise, this belongs in cli-agents/editors/sdks instead. -->
+<!-- One or two sentences on why this specific combination needs its own doc. Only create a runbook when there's real friction beyond the generic tool doc. Otherwise, this belongs in cli-agents/editors/sdks/agent-platforms instead. -->
 
 ## Goal
 

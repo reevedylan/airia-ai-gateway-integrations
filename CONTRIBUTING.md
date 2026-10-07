@@ -9,11 +9,12 @@ Work out which category fits before creating a folder:
 - **CLI agent** (a coding agent run from the terminal, e.g. Claude Code, Codex CLI) → `cli-agents/`
 - **Editor or IDE** (e.g. Cursor, VS Code, Zed) → `editors/`
 - **Language SDK or framework** (e.g. OpenAI SDK, LangChain) → `sdks/`
+- **AI or agent platform** that connects to the gateway for model access (e.g. Azure AI Foundry) → `agent-platforms/`
 - **A specific tool + model provider combination that needs extra, non-obvious configuration** (e.g. routing a CLI agent to a specific cloud provider requires model ID mapping) → `runbooks/`
 
-Don't create a runbook for every possible tool + provider pairing. Only write one when there's real friction beyond what the generic tool doc in `cli-agents/`, `editors/`, or `sdks/` already covers.
+Don't create a runbook for every possible tool + provider pairing. Only write one when there's real friction beyond what the generic tool doc in `cli-agents/`, `editors/`, `sdks/`, or `agent-platforms/` already covers.
 
-## Adding a CLI agent, editor, or SDK integration
+## Adding a CLI agent, editor, SDK, or agent platform integration
 
 1. Copy `templates/tool-template.md` to `<category>/<tool-slug>/README.md` (e.g. `cli-agents/codex-cli/README.md`).
 2. Fill in every section, and don't leave template placeholders in the merged doc.
