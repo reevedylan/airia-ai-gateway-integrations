@@ -33,35 +33,35 @@ Replace the base URL with your tenant's Gateway URL from the Airia dashboard.
 - **[`cli-agents/`](cli-agents/)**: CLI-based coding agents (Claude Code, Codex CLI, Gemini CLI, etc.)
 - **[`editors/`](editors/)**: IDEs and editor integrations (Cursor, VS Code, Zed, etc.)
 - **[`sdks/`](sdks/)**: Language SDKs and frameworks (OpenAI SDK, Anthropic SDK, LangChain, etc.)
-- **[`agent-platforms/`](agent-platforms/)**: AI and agent platforms that use the gateway for model access (Azure AI Foundry, etc.)
+- **[`agent-platforms/`](agent-platforms/)**: AI and agent platforms that use the gateway for model access (Microsoft Foundry, etc.)
 - **[`runbooks/`](runbooks/)**: Specific tool + model provider recipes that need extra configuration beyond the generic setup (e.g. a CLI agent routed through a particular cloud provider)
 
 ## CLI Agents
 
-| Integration | Status | Docs |
-|---|---|---|
-| _No integrations documented yet_ | | |
+| Integration | Docs |
+|---|---|
+| _No integrations documented yet_ | |
 
 ## Editors
 
-| Integration | Status | Docs |
-|---|---|---|
-| _No integrations documented yet_ | | |
+| Integration | Docs |
+|---|---|
+| _No integrations documented yet_ | |
 
 ## SDKs
 
-| Integration | Status | Docs |
-|---|---|---|
-| _No integrations documented yet_ | | |
+| Integration | Docs |
+|---|---|
+| _No integrations documented yet_ | |
 
 ## Agent Platforms
 
-| Integration | Status | Docs |
-|---|---|---|
-| _No integrations documented yet_ | | |
+| Integration | Docs |
+|---|---|
+| Microsoft Foundry (Azure AI Foundry) | [Setup guide](agent-platforms/microsoft-foundry/README.md) |
 
 ## Runbooks
 
-| Runbook | Status | Docs |
-|---|---|---|
-| _No runbooks documented yet_ | | |
+| Runbook | Docs |
+|---|---|
+| _No runbooks documented yet_ | |
