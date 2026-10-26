@@ -59,6 +59,7 @@ Replace the base URL with your tenant's Gateway URL from the Airia dashboard.
 | Integration | Docs |
 |---|---|
 | Microsoft Foundry (Azure AI Foundry) | [Setup guide](agent-platforms/microsoft-foundry/README.md) |
+| Microsoft Foundry hosted agents (Azure AI Foundry) | [Setup guide](agent-platforms/foundry-hosted-agents/README.md) |
 
 ## Runbooks
 
