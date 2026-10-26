@@ -2,6 +2,27 @@
 
 Microsoft Foundry is Azure's platform for building and running AI agents. This guide connects Foundry to the Airia AI Gateway as an **admin-connected model**, so Foundry prompt agents send their model requests through Airia.
 
+## TL;DR
+
+Microsoft Foundry Agent Service supports two agent types relevant to this integration: **prompt agents** and **hosted agents**.
+
+### Hosted agents
+
+Hosted agents built with the Microsoft Agent Framework have **not been tested** with Airia.
+
+### Prompt agents
+
+To use Airia with a prompt agent, add Airia as a model connection in your Foundry project. Supported configurations:
+
+| Model / API | Status | Notes |
+|---|---|---|
+| Anthropic Claude models | ✅ Supported | |
+| Chat Completions API models | ✅ Supported | |
+| OpenAI Responses API models | ⚠️ Partially supported | Chat only. Tool calling is not supported. |
+| Foundry Models (Azure-hosted) routed through the Airia AI Gateway | ❓ Untested | |
+
+> **Note:** The rest of this guide applies to prompt agents only.
+
 ## Overview
 
 Once connected, any Foundry prompt agent can use models served by the Airia AI Gateway, with every request covered by Airia's guardrails, data loss prevention, and observability. This guide sets up one connection with two example models: Claude Sonnet 5.5 (with tools) and GPT-6.1 Sol (text chat only).
